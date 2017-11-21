@@ -1,4 +1,4 @@
-﻿@model PetShop_Take2.Models.Pet
+﻿@model PetShop_Take2.Models.PetFoodViewModel
 
 @{
     ViewBag.Title = "Details";
@@ -11,32 +11,32 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.PetName)
+            @Html.DisplayNameFor(model => model.pet.PetName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PetName)
+            @Html.DisplayFor(model => model.pet.PetName)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PetType)
+            @Html.DisplayNameFor(model => model.pet.PetType)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PetType)
+            @Html.DisplayFor(model => model.pet.PetType)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PetWeight)
+            @Html.DisplayNameFor(model => model.pet.PetWeight)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.PetWeight)
+            @Html.DisplayFor(model => model.pet.PetWeight)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.PetID }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.pet.PetID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
