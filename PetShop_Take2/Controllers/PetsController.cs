@@ -36,9 +36,9 @@ namespace PetShop_Take2.Controllers
             var viewModel = new PetFoodViewModel
             {
                 pet = originalPet,
-                food = (from food in db.Foods
+                foods = (from food in db.Foods
                        where food.FoodName.Contains(originalPet.PetType)
-                       select food).First()
+                       select food).ToList()
             };
 
             return View(viewModel);
